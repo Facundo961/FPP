@@ -91,6 +91,15 @@ class Lexer
 		return result;
 	}
 
+	void makeSimbolFromCharacterString();
+	void makeSimbolFromNumberString();
+	void makeSimbolFromSymbolString();
+
+	void preProcess(std::string& string);
+	void stripComments(std::string& string);
+	void doIfs(std::string& string);
+	void doDefines(std::string& string);
+
 public:
 	void Process(class SimbolTree& simbolTree, std::string& string);
 };
