@@ -2,6 +2,8 @@
 
 #include <string>
 
+#include "File.h"
+
 class Lexer
 {
 	enum class CharacterType : unsigned char
@@ -95,10 +97,10 @@ class Lexer
 	void makeSimbolFromNumberString();
 	void makeSimbolFromSymbolString();
 
-	void preProcess(std::string& string);
-	void stripComments(std::string& string);
-	void doIfs(std::string& string);
-	void doDefines(std::string& string);
+	void preProcess(FileView& file);
+	void stripComments(FileView& file);
+	void doIfs(FileView& file);
+	void doDefines(FileView& file);
 
 public:
 	void Process(class SimbolTree& simbolTree, std::string& string);

@@ -83,14 +83,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Compiler.cpp" />
+    <ClCompile Include="File.cpp" />
     <ClCompile Include="FPP.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="SimbolTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Compiler.h" />
+    <ClInclude Include="File.h" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="SimbolTree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Documents\f++.fpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

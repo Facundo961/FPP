@@ -1,17 +1,37 @@
 #include "Lexer.h"
 
 #include "SimbolTree.h"
+#include "File.h"
 
-void Lexer::preProcess(std::string& string)
+void Lexer::preProcess(FileView& file)
 {
-	stripComments(string);
-	doIfs(string);
-	doDefines(string);
+	stripComments(file);
+	doIfs(file);
+	doDefines(file);
+}
+
+void Lexer::stripComments(FileView& file)
+{
+	auto a = file.GetCurrentLine().find("//");
+	if (a != file.GetCurrentLine().npos)
+	{
+		file.GetCurrentLine().erase(file.GetCurrentLine().begin() + a, file.GetCurrentLine().end());
+	}
+
+	//auto b = file.GetCurrentLine().find("/*");
+	//if (b != file.GetCurrentLine().npos)
+	//{
+	//	file.GetCurrentLine().erase(file.GetCurrentLine().begin() + a, file.GetCurrentLine().end());
+	//}
 }
 
 void Lexer::Process(SimbolTree& simbolTree, std::string& string)
 {
-	preProcess(string);
+	File file(string);
+
+	FileView file_view(&file);
+
+	preProcess(file_view);
 
 	unsigned long long i{ 0 };
 
