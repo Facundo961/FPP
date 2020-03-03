@@ -89,6 +89,7 @@
     <ClCompile Include="SimbolTree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Body.h" />
     <ClInclude Include="Compiler.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="Lexer.h" />

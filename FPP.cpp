@@ -18,9 +18,6 @@ int main(int argc, char* argv[])
 
     std::string code{ std::istreambuf_iterator<char>(input), std::istreambuf_iterator<char>() };
 
-    Lexer lexer;
-    lexer.Process(tree, code);
-
     Compiler compiler;
     compiler.Compile(tree);
 

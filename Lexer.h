@@ -3,6 +3,13 @@
 #include <string>
 
 #include "File.h"
+#include "Body.h"
+
+struct LexContext
+{
+	std::string* string = 0;
+	size_t CurrentChar = 0;
+};
 
 class Lexer
 {
@@ -102,6 +109,8 @@ class Lexer
 	void doIfs(FileView& file);
 	void doDefines(FileView& file);
 
+	std::vector<Body*> bodies;
+	std::vector<std::string> bodyEntryStrings;
 public:
 	void Process(class SimbolTree& simbolTree, std::string& string);
 };
