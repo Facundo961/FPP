@@ -82,21 +82,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Compiler.cpp" />
-    <ClCompile Include="File.cpp" />
-    <ClCompile Include="FPP.cpp" />
-    <ClCompile Include="Lexer.cpp" />
-    <ClCompile Include="SimbolTree.cpp" />
+    <ClCompile Include="src\Compiler.cpp" />
+    <ClCompile Include="src\File.cpp" />
+    <ClCompile Include="src\FPP.cpp" />
+    <ClCompile Include="src\Lexer.cpp" />
+    <ClCompile Include="src\Platform\Win32\EXECreator.cpp" />
+    <ClCompile Include="src\SimbolTree.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Body.h" />
-    <ClInclude Include="Compiler.h" />
-    <ClInclude Include="File.h" />
-    <ClInclude Include="Lexer.h" />
-    <ClInclude Include="SimbolTree.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\Documents\f++.fpp" />
+    <ClInclude Include="src\Body.h" />
+    <ClInclude Include="src\Buffer.h" />
+    <ClInclude Include="src\Compiler.h" />
+    <ClInclude Include="src\File.h" />
+    <ClInclude Include="src\Lexer.h" />
+    <ClInclude Include="src\Platform\Win32\EXECreator.h" />
+    <ClInclude Include="src\SimbolTree.h" />
+    <ClInclude Include="src\Platform\Win32\WindowsHeaders.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

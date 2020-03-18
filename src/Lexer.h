@@ -104,6 +104,7 @@ class Lexer
 	void makeSimbolFromNumberString();
 	void makeSimbolFromSymbolString();
 
+	Lexer();
 	void preProcess(FileView& file);
 	void stripComments(FileView& file);
 	void doIfs(FileView& file);
